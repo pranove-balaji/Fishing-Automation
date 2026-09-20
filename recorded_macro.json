@@ -1,0 +1,1307 @@
+[
+  {
+    "t": 0.1342,
+    "type": "key_up",
+    "key": "Key.f4"
+  },
+  {
+    "t": 3.3402,
+    "type": "key_down",
+    "key": "e"
+  },
+  {
+    "t": 3.4824,
+    "type": "key_up",
+    "key": "e"
+  },
+  {
+    "t": 4.59,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 4.7019,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 5.852,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 5.9202,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 6.558,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 6.624,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 7.9499,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.4495,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.4838,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.516,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.5492,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.5819,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.615,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.6477,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.6818,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.7137,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.7481,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.7802,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.813,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.8455,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.8787,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.9121,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.9448,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 8.9777,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.0114,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.0438,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.0771,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.1101,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.1443,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.1761,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.2094,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.242,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.275,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.3079,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.3415,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.3737,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.4073,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.4404,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.4729,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.5063,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.5392,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.573,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.6052,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.6383,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.6715,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.7041,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.7385,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.7707,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.8033,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.836,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.8693,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.902,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 9.9301,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 12.9662,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.4663,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.4979,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.5314,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.5641,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.5979,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.6305,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.6629,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.6957,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.7291,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.7623,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.7948,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.8279,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.8613,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.8938,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.9279,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.9605,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 13.994,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.0257,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.0593,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.0923,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.1249,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.1578,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.1917,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.2246,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 14.2298,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 16.3582,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 16.8593,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 16.8915,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 16.9244,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 16.9579,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 16.9902,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.0242,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.0563,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.0894,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.1224,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.1555,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.1879,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.2213,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.2543,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.2879,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.3201,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.3539,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.3872,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.4196,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.4527,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.4858,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.5185,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.5513,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.5846,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.6176,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.6502,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.6834,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.7169,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.7494,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.7825,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.815,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.848,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.8818,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 17.906,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 20.4639,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 20.9641,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 20.997,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.0299,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.0638,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.0959,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.129,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.1619,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.1947,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.2283,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.2607,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.2939,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.3277,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.3601,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.3937,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.4259,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.4592,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.4922,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.5249,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.5583,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.5916,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.6242,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.6572,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.6899,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.7239,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.756,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.789,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.8221,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.8555,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.8876,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.9212,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.9538,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 21.9874,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 22.0207,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 22.024,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 24.852,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.352,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.3852,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.418,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.4508,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.4838,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.5175,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.5502,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.5839,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.6161,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.6497,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.6822,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.7149,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.7479,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.7807,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.8141,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.8472,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.8799,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.913,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.946,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 25.9792,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.0118,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.046,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.078,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.1114,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.1445,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.177,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.2104,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.2439,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.2766,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.3092,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.3425,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.3751,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.4079,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.4408,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.4742,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.5071,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.5403,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.5728,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.6061,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 26.636,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 29.5101,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.01,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.0431,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.076,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.1093,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.1423,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.175,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.2078,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.2416,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.2737,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.3078,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.3395,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.3729,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.4061,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.439,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.4725,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.5052,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.5377,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.5706,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.6042,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.638,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.6698,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.7036,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.7362,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.7687,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.8019,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.8349,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.8676,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.9013,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.9341,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 30.9664,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.0002,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.0328,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.066,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.0989,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.1316,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.1653,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.1978,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.2317,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.2639,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.2976,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.3297,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 31.3384,
+    "type": "key_up",
+    "key": "Key.space"
+  },
+  {
+    "t": 33.7919,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.2916,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.3247,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.358,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.3903,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.4241,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.4567,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.49,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.523,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.5559,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.589,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.6214,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.655,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.6874,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.7212,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.7537,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.7872,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.8195,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.8528,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.8862,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.9191,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.9513,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 34.9851,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 35.0179,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 35.0515,
+    "type": "key_down",
+    "key": "Key.space"
+  },
+  {
+    "t": 35.0801,
+    "type": "key_up",
+    "key": "Key.space"
+  }
+]
