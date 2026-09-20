@@ -57,12 +57,16 @@ def is_blue_progress(r, g, b):
 
 # ── Screen capture ───────────────────────────────────────────────────────────
 
-_sct = None
+_local = threading.local()
 def get_sct():
-    global _sct
-    if _sct is None:
-        _sct = mss.mss()
-    return _sct
+    if not hasattr(_local, "sct"):
+        _local.sct = mss.MSS()
+    return _local.sct
+
+def close_sct():
+    if hasattr(_local, "sct"):
+        _local.sct.close()
+        del _local.sct
 
 def capture(region: dict) -> np.ndarray:
     """Returns HxWx3 RGB array."""
@@ -128,7 +132,7 @@ def find_pointer_and_green(row_rgb, cfg):
 
     return ptr, g_left, g_right
 
-def run_phase1(kb_ctrl, cfg, stop_event) -> bool:
+def run_phase1(kb_ctrl, cfg, stop_event, log_cb=print) -> bool:
     """Single NET HAUL press. Returns True on success."""
     bar = dict(cfg["phase1_bar"])
     # Scan middle row of the bar
@@ -136,14 +140,14 @@ def run_phase1(kb_ctrl, cfg, stop_event) -> bool:
     lead = int(cfg["lead_fraction"] * bar["width"])
     deadline = time.time() + cfg["phase_timeout"]
 
-    print("  [P1] Watching pointer…")
+    log_cb("  [P1] Watching pointer…")
     while not stop_event.is_set() and time.time() < deadline:
         row = capture(scan)
         ptr, gl, gr = find_pointer_and_green(row, cfg)
 
         if ptr != -1 and gl != -1:
             if (gl - lead) <= ptr <= (gr + lead):
-                print(f"    ✓ SPACE! ptr={ptr} green={gl}–{gr}")
+                log_cb(f"    ✓ SPACE! ptr={ptr} green={gl}–{gr}")
                 kb_ctrl.press(Key.space)
                 time.sleep(0.05)
                 kb_ctrl.release(Key.space)
@@ -152,7 +156,7 @@ def run_phase1(kb_ctrl, cfg, stop_event) -> bool:
 
         time.sleep(cfg["poll_ms"] / 1000)
 
-    print("  [P1] Timeout.")
+    log_cb("  [P1] Timeout.")
     return False
 
 # ── Phase 2 — HAUL THE NET ───────────────────────────────────────────────────
@@ -199,46 +203,52 @@ def read_progress(cfg) -> int:
     filled = int(((b > 150) & (b > r) & (b > g) & (g > 80) & (r > 30)).sum())
     return int(filled / mid.shape[0] * 100)
 
-def run_phase2(kb_ctrl, cfg, stop_event) -> bool:
-    """Haul the net until 100%. Returns True on completion."""
-    print("  [P2] Hauling (smart strain tracking)…")
-    holding = False
-    deadline = time.time() + cfg["phase_timeout"] * 4
-
-    while not stop_event.is_set() and time.time() < deadline:
-        progress = read_progress(cfg)
-        strain   = read_strain(cfg)
-        print(f"\r    progress={progress:3d}%  strain={strain:<7}", end="", flush=True)
-
-        if progress >= 98:
-            print(f"\n  [P2] ✓ Done at {progress}%")
-            if holding:
-                kb_ctrl.release(Key.space)
-            return True
-
-        if strain == "safe" and not holding:
-            kb_ctrl.press(Key.space)
-            holding = True
-        elif (strain == "danger" or strain == "empty") and holding:
-            kb_ctrl.release(Key.space)
-            holding = False
-
-        time.sleep(cfg["poll_ms"] / 1000)
-
-    if holding:
+def run_phase2(kb_ctrl, cfg, stop_event, log_cb=print) -> bool:
+    """Haul the net: Hold 1s (or until danger), Sleep 2s, repeat 8 times."""
+    log_cb("  [P2] Hauling (1s hold / 2s sleep, with danger check)…")
+    
+    for i in range(11):
+        if stop_event.is_set():
+            break
+            
+        log_cb(f"\r    Hold & Release {i+1}/8  ", end="")
+        
+        # Hold space for up to 1 second
+        kb_ctrl.press(Key.space)
+        hold_end = time.time() + 1.0
+        while time.time() < hold_end and not stop_event.is_set():
+            if read_strain(cfg) == "danger":
+                break
+            time.sleep(0.05)
         kb_ctrl.release(Key.space)
-    print("\n  [P2] Timeout.")
-    return False
+        
+        if stop_event.is_set():
+            break
+            
+        # Sleep for 2 seconds
+        rest_end = time.time() + 2.0
+        while time.time() < rest_end and not stop_event.is_set():
+            time.sleep(0.1)
+
+    log_cb("\n  [P2] ✓ Done")
+    return True
 
 # ── Main bot loop ─────────────────────────────────────────────────────────────
 
 class FishingBot:
-    def __init__(self, cfg):
+    def __init__(self, cfg, log_callback=None):
         self.cfg = cfg
         self.running = False
         self.stop_event = threading.Event()
         self.kb = KeyboardController()
         self._thread = None
+        self.log_callback = log_callback
+
+    def log(self, text, end="\n"):
+        if self.log_callback:
+            self.log_callback(text, end)
+        else:
+            print(text, end=end, flush=True)
 
     def start(self):
         if self.running:
@@ -247,7 +257,7 @@ class FishingBot:
         self.running = True
         self._thread = threading.Thread(target=self._loop, daemon=True)
         self._thread.start()
-        print("\n[BOT] ▶ Started — F11 to stop\n")
+        self.log("\n[BOT] ▶ Started — F11 to stop\n")
 
     def stop(self):
         if not self.running:
@@ -258,16 +268,25 @@ class FishingBot:
             self.kb.release(Key.space)
         except Exception:
             pass
-        print("\n[BOT] ■ Stopped.")
+        self.log("\n[BOT] ■ Stopped.")
 
     def _loop(self):
+        try:
+            self._run_loop()
+        except mss.exception.ScreenShotError:
+            self.log("\n[ERR] Screen capture failed! Make sure FiveM is in 'Borderless' or 'Windowed' mode, NOT Exclusive Fullscreen!\n")
+            self.stop()
+        finally:
+            close_sct()
+
+    def _run_loop(self):
         cycle = 0
         while not self.stop_event.is_set():
             cycle += 1
-            print(f"\n[BOT] ══ Cycle #{cycle} ══")
+            self.log(f"\n[BOT] ══ Cycle #{cycle} ══")
 
             # Cast net
-            print("[BOT] Pressing E to cast…")
+            self.log("[BOT] Pressing E to cast…")
             self.kb.press("e")
             time.sleep(self.cfg["cast_hold"])
             self.kb.release("e")
@@ -276,20 +295,20 @@ class FishingBot:
                 break
 
             # Phase 1 × 3
-            print("[BOT] Waiting for NET HAUL…")
+            self.log("[BOT] Waiting for NET HAUL…")
             p1_hits = 0
             p1_deadline = time.time() + self.cfg["phase_timeout"]
 
             while p1_hits < 3 and not self.stop_event.is_set():
                 if time.time() > p1_deadline:
-                    print("[BOT] Phase 1 timed out — recasting.")
+                    self.log("[BOT] Phase 1 timed out — recasting.")
                     break
                 phase = detect_phase(self.cfg)
                 if phase == "phase1":
-                    ok = run_phase1(self.kb, self.cfg, self.stop_event)
+                    ok = run_phase1(self.kb, self.cfg, self.stop_event, log_cb=self.log)
                     if ok:
                         p1_hits += 1
-                        print(f"[BOT] NET HAUL {p1_hits}/3 ✓")
+                        self.log(f"[BOT] NET HAUL {p1_hits}/3 ✓")
                         p1_deadline = time.time() + self.cfg["phase_timeout"]
                         time.sleep(0.2)
                 time.sleep(self.cfg["poll_ms"] / 1000)
@@ -297,28 +316,28 @@ class FishingBot:
             if self.stop_event.is_set():
                 break
             if p1_hits < 3:
-                print("[BOT] Phase 1 incomplete — recasting.")
+                self.log("[BOT] Phase 1 incomplete — recasting.")
                 continue
 
             # Phase 2
-            print("[BOT] Waiting for HAUL THE NET…")
+            self.log("[BOT] Waiting for HAUL THE NET…")
             p2_deadline = time.time() + self.cfg["phase_timeout"]
             while not self.stop_event.is_set() and time.time() < p2_deadline:
                 if detect_phase(self.cfg) == "phase2":
                     break
                 time.sleep(self.cfg["poll_ms"] / 1000)
             else:
-                print("[BOT] Phase 2 not found — recasting.")
+                self.log("[BOT] Phase 2 not found — recasting.")
                 continue
 
-            run_phase2(self.kb, self.cfg, self.stop_event)
-            print("[BOT] Resting 1s before next cast…")
+            run_phase2(self.kb, self.cfg, self.stop_event, log_cb=self.log)
+            self.log("[BOT] Resting 1s before next cast…")
             time.sleep(1.0)
 
-        print("[BOT] Loop exited.")
+        self.log("[BOT] Loop exited.")
 
     def listen_hotkeys(self):
-        print("\n[HOT] F5=Start  F11=Stop  F12=Exit\n")
+        self.log("\n[HOT] F5=Start  F11=Stop  F12=Exit\n")
         def on_press(key):
             if key == Key.f5:
                 self.start()
@@ -326,7 +345,7 @@ class FishingBot:
                 self.stop()
             elif key == Key.f12:
                 self.stop()
-                print("[EXIT] Bye!")
+                self.log("[EXIT] Bye!")
                 os._exit(0)
         with keyboard.Listener(on_press=on_press) as lst:
             lst.join()
