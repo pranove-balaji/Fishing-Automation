@@ -14,8 +14,8 @@ Phase 2 — HAUL THE NET:
 
 Controls:
   F5  → Start bot
-  F9  → Stop bot
-  F10 → Exit
+  F11 → Stop bot
+  F12 → Exit
 """
 
 import time, json, os, sys, threading
@@ -236,7 +236,7 @@ class FishingBot:
         self.running = True
         self._thread = threading.Thread(target=self._loop, daemon=True)
         self._thread.start()
-        print("\n[BOT] ▶ Started — F9 to stop\n")
+        print("\n[BOT] ▶ Started — F11 to stop\n")
 
     def stop(self):
         if not self.running:
@@ -307,13 +307,13 @@ class FishingBot:
         print("[BOT] Loop exited.")
 
     def listen_hotkeys(self):
-        print("\n[HOT] F5=Start  F9=Stop  F10=Exit\n")
+        print("\n[HOT] F5=Start  F11=Stop  F12=Exit\n")
         def on_press(key):
             if key == Key.f5:
                 self.start()
-            elif key == Key.f9:
+            elif key == Key.f11:
                 self.stop()
-            elif key == Key.f10:
+            elif key == Key.f12:
                 self.stop()
                 print("[EXIT] Bye!")
                 os._exit(0)

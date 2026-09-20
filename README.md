@@ -132,7 +132,7 @@ You should see this:
   Calibrated for 2560x1600
 =======================================================
 [CFG] Loaded config.json
-[HOT] F5=Start  F9=Stop  F10=Exit
+[HOT] F5=Start  F11=Stop  F12=Exit
 ```
 
 ---
@@ -158,8 +158,8 @@ The bot will:
 | Key | Action |
 |-----|--------|
 | `F5` | ▶ Start the bot |
-| `F9` | ■ Stop the bot |
-| `F10` | ✕ Exit the program |
+| `F11` | ■ Stop the bot |
+| `F12` | ✕ Exit the program |
 | Mouse to **top-left corner** | 🚨 Emergency stop (instant abort) |
 
 ---
