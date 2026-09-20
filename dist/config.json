@@ -1,0 +1,26 @@
+{
+  "_note": "Auto-generated from YOUR 2560x1600 screenshots. Do not edit unless your resolution changes.",
+
+  "phase1_bar":      { "left": 1044, "top": 947, "width": 456, "height": 30 },
+  "phase2_bar":      { "left": 1044, "top": 958, "width": 475, "height": 20 },
+  "phase2_progress": { "left": 1025, "top": 860, "width": 510, "height": 3  },
+
+  "detect_phase1":   { "left": 1043, "top": 920, "width": 20,  "height": 16 },
+  "detect_phase2":   { "left": 1025, "top": 858, "width": 510, "height": 6  },
+
+  "green_min":         100,
+  "green_ratio":       1.4,
+  "white_min":         180,
+
+  "strain_green_min":   180,
+  "strain_green_ratio": 2.5,
+  "orange_r_min":       240,
+  "orange_g_max":       160,
+
+  "lead_fraction":   0.01,
+  "poll_ms":         8,
+  "haul_ease_delay": 0.10,
+  "cast_hold":       0.15,
+  "post_cast_wait":  1.5,
+  "phase_timeout":   25
+}
