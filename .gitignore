@@ -19,3 +19,17 @@ venv.bak/
 # OS generated files
 .DS_Store
 Thumbs.db
+build/fishing_bot_for_1920x1080/Analysis-00.toc
+build/fishing_bot_for_1920x1080/base_library.zip
+build/fishing_bot_for_1920x1080/EXE-00.toc
+build/fishing_bot_for_1920x1080/fishing_bot_for_1920x1080.pkg
+build/fishing_bot_for_1920x1080/PKG-00.toc
+build/fishing_bot_for_1920x1080/PYZ-00.pyz
+build/fishing_bot_for_1920x1080/PYZ-00.toc
+build/fishing_bot_for_1920x1080/warn-fishing_bot_for_1920x1080.txt
+build/fishing_bot_for_1920x1080/xref-fishing_bot_for_1920x1080.html
+dist/fishing_bot_for_1920x1080.exe
+Release_1920x1080/config_1920.zip
+Release_1920x1080/fishing_bot_for_1920x1080.exe
+fishing_bot_for_1920x1080.spec
+config (1).json
