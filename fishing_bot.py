@@ -159,23 +159,34 @@ def run_phase1(kb_ctrl, cfg, stop_event) -> bool:
 
 def read_strain(cfg) -> str:
     """
-    Sample the LINE STRAIN bar from right to left.
-    Returns 'danger', 'safe', or 'empty'.
+    Finds the white pointer in the LINE STRAIN bar.
+    Returns 'danger' (too far right), 'safe' (far left), or 'mid' (in between).
     """
     arr = capture(cfg["phase2_bar"])
     mid = arr[arr.shape[0] // 2]
 
-    # Scan right → left to find the rightmost filled (non-dark) pixel
-    for x in range(mid.shape[0] - 1, -1, -1):
+    ptr_x = -1
+    width = mid.shape[0]
+
+    # Scan left → right to find the white pointer
+    for x in range(width):
         r = int(mid[x, 0])
         g = int(mid[x, 1])
         b = int(mid[x, 2])
-        if r + g + b < 50:
-            continue
-        if is_strain_danger(r, g, b, cfg):
-            return "danger"
+        if is_white(r, g, b, cfg):
+            ptr_x = x
+            break
+
+    if ptr_x == -1:
+        return "empty"
+
+    pct = ptr_x / width
+    if pct > 0.60:
+        return "danger"
+    elif pct < 0.15:
         return "safe"
-    return "empty"
+    else:
+        return "mid"
 
 def read_progress(cfg) -> int:
     """Return 0–100 based on how much of the progress bar is filled (blue)."""
@@ -184,12 +195,13 @@ def read_progress(cfg) -> int:
     r = mid[:, 0].astype(int)
     g = mid[:, 1].astype(int)
     b = mid[:, 2].astype(int)
-    filled = int(((b > 100) & (b > r) & (b > g) & (g > 40)).sum())
+    # Use strict brightness check so the dark grey empty bar isn't counted as filled
+    filled = int(((b > 150) & (b > r) & (b > g) & (g > 80) & (r > 30)).sum())
     return int(filled / mid.shape[0] * 100)
 
 def run_phase2(kb_ctrl, cfg, stop_event) -> bool:
     """Haul the net until 100%. Returns True on completion."""
-    print("  [P2] Hauling…")
+    print("  [P2] Hauling (smart strain tracking)…")
     holding = False
     deadline = time.time() + cfg["phase_timeout"] * 4
 
@@ -207,10 +219,9 @@ def run_phase2(kb_ctrl, cfg, stop_event) -> bool:
         if strain == "safe" and not holding:
             kb_ctrl.press(Key.space)
             holding = True
-        elif strain == "danger" and holding:
+        elif (strain == "danger" or strain == "empty") and holding:
             kb_ctrl.release(Key.space)
             holding = False
-            time.sleep(cfg["haul_ease_delay"])
 
         time.sleep(cfg["poll_ms"] / 1000)
 
